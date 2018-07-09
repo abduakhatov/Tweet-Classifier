@@ -3,9 +3,9 @@ import pickle
 import nltk
 import re
 
-classifier = pickle.load(open('twc/data/trained/MNB.pickle', 'rb'))
+classifier = pickle.load(open('data/trained/MNB.pickle', 'rb'))
 word_features = pickle.load(open('twc/data/trained/word_features.pickle', 'rb'))
-
+ 
 def document_features(document):
 	document_words = set(document)
 	features = {}
@@ -17,7 +17,7 @@ def tweet_clean(t):
 		t = t.replace("#", "")
 		t = t.replace("@", "")
 		t = re.sub(r"[^\w\s]","",t)
-		t = re.sub(" \d+", " ", t)
+		t = re.sub(r" \d+", " ", t)
 		return t
 
 

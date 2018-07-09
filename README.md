@@ -56,9 +56,3 @@ The classifier being used here is **Multinomial Naive Bayes Classifier** with ac
 **Other classifiers Accuracy (On this dataset)**:
 - Naive Bayes Classifier: 72%
 - SVC: 74%
-
-    
-    
-    
-    
-    

@@ -19,12 +19,12 @@ print(raw_files)
 documents= []
 all_words  = []
 stp = stopwords.words('english')
-
-for f in raw_files:
+ 
+for f in raw_files:	
 	t = open(f).read()
 	for p in t.split('\n'):
 		p = re.sub(r'[^\w\s]','',p)
-		p = re.sub(" \d+", " ", p)
+		p = re.sub(r" \d+", " ", p)
 		p = [i.lower() for i in list(set(nltk.word_tokenize(p)) - set(stp))]
 		all_words+=p
 		documents.append((p, f[:-4]))

@@ -14,10 +14,10 @@ def document_features(document):
 def predict_topic(s):
 	token = nltk.word_tokenize(s.lower())
 	return classifier.classify(document_features(token))
-
+ 
 
 
 topic = predict_topic("""Well, that is taxation law of India (other side).In India 52,911 
 						Profitable Companies Pay 0% Tax in India!""")
-
+ 
 print(topic)
